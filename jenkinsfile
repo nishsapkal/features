@@ -2,9 +2,9 @@ node{
     for(int i=0;i<2;i++){
         
         stage "stage #"+ i
-        print 'Hello, world !'
+        print 'Changes in jenkins build file'
         if(i==0){
-            git ""
+            git "https://github.com/nishsapkal/startup.git"
             echo 'running on stage 0'
         }else{
             build 'declarative pipeline'
