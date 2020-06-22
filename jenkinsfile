@@ -4,8 +4,8 @@ node{
         stage "stage #"+ i
         print 'Changes in jenkins build file'
         if(i==0){
-            url: 'https://github.com/nishsapkal/startup/',
-			branch: "devops-demo"
+          //  url: 'https://github.com/nishsapkal/startup/',
+			//branch: "devops-demo"
             echo 'running on stage 0'
         }else{
             build 'declarative pipeline'
