@@ -1,0 +1,15 @@
+node{
+    for(int i=0;i<2;i++){
+        
+        stage "stage #"+ i
+        print 'Hello, world !'
+        if(i==0){
+            git ""
+            echo 'running on stage 0'
+        }else{
+            build 'declarative pipeline'
+            echo 'running on stage 1'
+        }
+        
+    }
+}
