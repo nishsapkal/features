@@ -8,7 +8,7 @@ node{
 			//branch: "devops-demo"
             echo 'running on stage 0'
         }else{
-            build 'declarative pipeline'
+            build 'nehr-pipeline'
             echo 'running on stage 1'
         }
         
