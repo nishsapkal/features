@@ -4,8 +4,13 @@ node{
         stage "stage #"+ i
         print 'Changes in jenkins build file'
         if(i==0){
+		  echo 'Code checkout process starts'
+			git branch: 'devops-demo',
+			url: 'https://github.com/jenkinsci/jenkins.git'
           //  url: 'https://github.com/nishsapkal/startup/',
+		  //'https://github.com/jenkinsci/jenkins.git'
 			//branch: "devops-demo"
+			checkout scm
             echo 'running on stage 0'
         }else{
             build 'nehr-pipeline'
