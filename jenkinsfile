@@ -2,7 +2,7 @@ node{
   
     stage ("Checkout")
 	{
-	  echo 'Code checkout process starts'
+		echo 'Code checkout process starts'
 		git branch: 'devops-demo',
 		url: 'https://github.com/jenkinsci/jenkins.git'
 		checkout scm
@@ -22,6 +22,4 @@ node{
 		bat 'gradlew.bat test'
 		echo 'Unit test completed'
 	}
-     
-    
 }
