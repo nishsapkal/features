@@ -13,7 +13,7 @@ node{
         }else{
           //  build 'nehr-pipeline'
 		    echo 'Code build is started'
-			bat gradlew clean
+			bat 'gradlew.bat clean build'
             echo 'Code build is completed'
         }
         
