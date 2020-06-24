@@ -7,14 +7,14 @@ node{
 		  echo 'Code checkout process starts'
 			git branch: 'devops-demo',
 			url: 'https://github.com/jenkinsci/jenkins.git'
-          //  url: 'https://github.com/nishsapkal/startup/',
-		  //'https://github.com/jenkinsci/jenkins.git'
 			//branch: "devops-demo"
 			checkout scm
-            echo 'running on stage 0'
+            echo 'Code checkout is completed'
         }else{
-            build 'nehr-pipeline'
-            echo 'running on stage 1'
+          //  build 'nehr-pipeline'
+		    echo 'Code build is started'
+			bat gradlew clean
+            echo 'Code build is completed'
         }
         
     }
