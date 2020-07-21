@@ -1,0 +1,16 @@
+---
+- hosts : web-server
+  gather_facts: no
+  tasks :
+  - name: install nginx
+    apt:
+     name: nginx
+     state: presetn
+     update_cache: yes
+    notify:
+    - start nginx
+    handlers:
+    - name: start nginx
+      service:
+       name: nginx
+       state: started
